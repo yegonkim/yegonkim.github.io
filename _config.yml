@@ -21,7 +21,7 @@ timezone:
 
 title: "Yegon Kim"
 
-tagline: "A small blog"   # it will display as the sub-title
+tagline: "A small world"   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A blog on various topics ranging from math to neuroscience
@@ -77,7 +77,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: "assets/img/avatar.png"
 
 # boolean type, the global switch for ToC in posts.
 toc: true
