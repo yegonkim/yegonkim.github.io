@@ -4,8 +4,8 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hello! I am a fourth-year undergraduate student studying **mathematics** at KAIST (Dajeon, South Korea). I am broadly interested in the applications of maths to **artificial intelligence** and **neuroscience**.
+Hello! I am a fourth-year undergraduate student studying **mathematics** at KAIST. I am also broadly interested in **artificial intelligence** and **neuroscience**.
 
+In my free time, I enjoy playing the piano or listening to music, mostly jazz.
 
-
-I have lived in four countries, namely Japan (3 years), France (4 years), China(7 years), and South Korea. 
+I am currently at EPFL for an exchange semester, and will head back to Korea in February!
