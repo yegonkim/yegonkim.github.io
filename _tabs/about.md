@@ -10,3 +10,4 @@ I am currently working on the intersection of active learning and PDE emulators,
 
 In my free time, I enjoy researching about stuff that interests me, which are mostly AI or neuroscience-related, or playing/listening to jazz.
 
+In my blog posts I will mostly share facts/intuition that people could find helpful, and occasionaly share some more subjective opinions on matters.
