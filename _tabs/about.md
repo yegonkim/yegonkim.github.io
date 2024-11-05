@@ -4,10 +4,16 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hello! I am a Master's student studying machine learning at KAIST under the guidance of professor Juho Lee. I received a Bachelor's degree in mathematics, at the same school.
+Hi, I am a Master's student studying Artificial Intelligence at KAIST.
+I have worked on active learning and scientific machine learning (with a focus on partial differential equations). Currently, I am interested in machines that can reason and make reliable decisions.
 
-I am currently working on the intersection of active learning and PDE emulators, in the hope of accelerating scientific discoveries. I am also broadly interested in reasoning capabilities of AI and rigorous, scientific approaches to understanding large models.
 
-In my free time, I enjoy researching about stuff that interests me, which are mostly AI or neuroscience-related, or playing/listening to jazz.
+## Education
 
-In my blog posts I will mostly share facts/intuition that people could find helpful, and occasionaly share some more subjective opinions on matters.
+### Korea Advanced Institute of Science and Technology (KAIST)
+**M.S. in Graduate School of Artificial Intelligence (GSAI)**  
+*2023 - Present*
+
+### Korea Advanced Institute of Science and Technology (KAIST)
+**B.S. in Mathematics** | *Summa Cum Laude*   
+*2019 - 2023*
