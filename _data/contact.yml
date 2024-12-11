@@ -29,7 +29,7 @@
 #   icon: 'fab fa-stack-overflow'
 #   url:  ''                  # Fill with your stackoverflow homepage
 
--
-  type: instagram
-  icon: 'fab fa-instagram'
-  url:  'https://www.instagram.com/yegon.kim/'
+# -
+#   type: instagram
+#   icon: 'fab fa-instagram'
+#   url:  'https://www.instagram.com/yegon.kim/'

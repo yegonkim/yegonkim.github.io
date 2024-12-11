@@ -21,10 +21,10 @@ timezone:
 
 title: "Yegon Kim"
 
-tagline: "Math / AI / Neuroscience"   # it will display as the sub-title
+tagline: " AI / Physics / Philosophy "   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A blog on various topics ranging from math to neuroscience
+  A blog on AI, physics, and other stuff I'm interested in
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://yegonkim.github.io'
@@ -41,7 +41,6 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/yegonkim       # change to your github homepage
-    - https://www.facebook.com/yegon.kim.9/
     - https://www.linkedin.com/in/yegon-kim-2004471a1/
 
 google_site_verification:               # fill in to your verification string
