@@ -3,6 +3,7 @@ title: Understanding Lagrangian mechanics
 categories: Physics
 date: 2023-01-15
 math: true
+published: false
 ---
 
 This is a post for rigor-obsessed people who, just like I did, had a hard time following the logic of Lagrangian mechanics, especially when applied to problems with reduced degrees of freedom such as the pendulum problem. This is not an introduction to Lagrangian mechanics, but rather a list of confusions I had when studying Lagrangian mechanics and how I resolved them.
