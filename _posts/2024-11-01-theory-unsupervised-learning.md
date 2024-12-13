@@ -1,8 +1,9 @@
 ---
-title: An Observation on Generalization
+title: A Theory of Unsupervised Learning
 categories: Artificial Intelligence
 date: 2024-11-01
 math: true
+published: true
 ---
 
 In this post, I summarize [Ilya Sutskever's talk titled "An Observation on Generalization."](https://www.youtube.com/watch?v=AKMuA_TVz3A&t=1666s&ab_channel=SimonsInstitute) The talk is about a general theory of unsupervised learning, based on algorithmic information theory (AIT). Once I understood it, I realized that it's answering a question that I've had for a long time without knowing how to properly phrase it. It took me quite some time to understand the idea, but it's really very simple. The notations are kept the same as the original talk, to prevent any confusion.

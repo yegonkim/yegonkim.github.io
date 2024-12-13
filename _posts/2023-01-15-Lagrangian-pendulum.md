@@ -1,5 +1,5 @@
 ---
-title: Understanding Lagrangian mechanics
+title: Understanding Lagrangian Mechanics
 categories: Physics
 date: 2023-01-15
 math: true

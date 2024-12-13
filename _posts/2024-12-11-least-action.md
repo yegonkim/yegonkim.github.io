@@ -1,11 +1,12 @@
 ---
-title: Lagrangian mechanics and d'Alembert's principle
+title: What was Missing in my Study of Lagrangian Mechanics
 categories: Physics
 date: 2024-12-12
 math: true
+published: true
 ---
 
-One of the most famous examples used to introduce Lagrangian mechanics to students it the dynamics of a pendulum. I always found there was something missing in the derivation of the solution. It turns out that the missing part is d'Alembert's principle, which unfortunately was not taught in my physics class.
+One of the most famous examples for introducing Lagrangian mechanics is deriving the dynamics of a pendulum. I was never taught d'Alembert's principle, which is a crucial part of the derivation.
 
 TL;DR:
 - D'Alembert's principle provides the justification for using Lagrangian in a constrained system
