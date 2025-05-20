@@ -1,5 +1,5 @@
 ---
-title: What was Missing in my Study of Lagrangian Mechanics
+title: D'Alembert's Principle and the Principle of Least Action
 categories: Physics
 date: 2024-12-12
 math: true
