@@ -1,6 +1,6 @@
 ---
 title: Differential Forms
-categories: Physics
+categories: Mathematics
 date: 2025-05-22
 math: true
 published: false
