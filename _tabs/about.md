@@ -5,13 +5,13 @@ order: 4
 ---
 
 Hi, I am a Master's student studying Artificial Intelligence at KAIST.
-I have worked on active learning and scientific machine learning (with a focus on partial differential equations). Currently, I am interested in weak-to-strong generalization and the representation of values in AI agents.
+I have worked on active learning and scientific machine learning (with a focus on partial differential equations). Currently, I am interested in weak-to-strong generalization and the representation of values in both AI and humans.
 
 
 ## Education
 
 ### Korea Advanced Institute of Science and Technology (KAIST)
-**M.S. in Graduate School of Artificial Intelligence (GSAI)**  
+**M.S. in Graduate School of Artificial Intelligence**  
 *2023 - Present*
 
 ### Korea Advanced Institute of Science and Technology (KAIST)
