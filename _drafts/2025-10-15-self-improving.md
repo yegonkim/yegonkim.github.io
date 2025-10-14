@@ -1,7 +1,7 @@
 ---
 title: Self-Improving AI
 categories: Artificial Intelligence
-date: 2025-10-14
+date: 2025-10-15
 math: true
 published: false
 ---
@@ -22,7 +22,7 @@ exploration -> Montezuma's Revenge
 planning -> 
 image understanding -> 
 
-asdf
+
 gdpval
 
 i think some of these mistaken for 
@@ -51,6 +51,15 @@ how can llms organize their research? academic papers might not be the optimal c
 therefore, i imagine that 
 
 
+I find it hard to believe that evolution had high selective pressure for extremely long horizon tasks, such as planning for months. 
+
+
+how is it better than human researchers?
+- can run in parallel (many ais)
+- clear reproducibility and hence better credit assignment
+- faster iteration (time to code, run scripts, job scheduling, etc.)
+- better structured knowledge of other agents' research and hence less time spent on reading papers
+- 
 
 <!-- if there's one thing i learnt from listening to a bunch of neuroscience courses in undergrad, it woudl be that the brain  -->
 

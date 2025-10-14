@@ -89,5 +89,6 @@ $$ \ddot{q} = 0,\qquad \ddot{q}' = 0 .$$
 However, the Lagrangian does not change by a total time derivative of some function $F(q,\dot q, t)$ unless $\lambda = 1$.
 
 References:
-- Qmechanic. Answer to "Invariance of Lagrangian in Noether's theorem." Physics Stack Exchange, 8 Feb. 2012, physics.stackexchange.com/questions/11313/invariance-of-lagrangian-in-noethers-theorem/11317#11317.
-- "Noether's Theorem." Wikipedia, Wikimedia Foundation, en.wikipedia.org/wiki/Noether%27s_theorem. Accessed 10 Oct. 2025.
+- Qmechanic. Answer to "Invariance of Lagrangian in Noether's theorem." Physics Stack Exchange, 8 Feb. 2012, https://physics.stackexchange.com/questions/11313/invariance-of-lagrangian-in-noethers-theorem/11317#11317.
+- jak. Answer to "Prove that Noether's Theorem produces generators of the symmetry." Physics Stack Exchange, 8 Feb. 2012, https://physics.stackexchange.com/questions/388113/prove-that-noethers-theorem-produces-generators-of-the-symmetry?rq=1.
+- "Noether's Theorem." Wikipedia, Wikimedia Foundation, https://en.wikipedia.org/wiki/Noether%27s_theorem. Accessed 10 Oct. 2025.
