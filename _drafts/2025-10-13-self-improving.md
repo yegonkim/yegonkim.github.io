@@ -1,5 +1,5 @@
 ---
-title: One Who Makes Evals Controls the World
+title: Self-Improving AI
 categories: Artificial Intelligence
 date: 2025-10-14
 math: true
@@ -19,8 +19,10 @@ perfect information two player zero sum game -> Go
 sample efficiency -> arc
 credit assignment -> atari games
 exploration -> Montezuma's Revenge
+planning -> 
+image understanding -> 
 
-
+asdf
 gdpval
 
 i think some of these mistaken for 
