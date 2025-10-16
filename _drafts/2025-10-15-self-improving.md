@@ -6,14 +6,24 @@ math: true
 published: false
 ---
 
+Qs:
+how clear is the line between benchmarks that evaluate and benchmarks that innovate?
+
+
+i used to think improving capability A by using capability A is not possible, that it would violate some sort of no-free-lunch theorem. but this might not be the case. if A depends on subcapabilities B and C, then A could be used to improve B and C, which in turn improves A.
+
+https://arxiv.org/abs/1803.03453
+
 analyze actual outputs of alphaevolve.
+honestly the outputs don't really impress me. but the results do. it seems like adding the half integer regularization was due to the prompt, and the fact that it works well. to be clear, the prompt didn't specify how to achieve this, so that's impressive. but i don't see anything not mentioned in the prompt. but this is understandable since the problem is probably quite hard, and a very very large innovation is probably needed to make an improvement.
 how creative it actually is now, and how better it will probably get.
 
+this gives me hope that scaling ai researchers will also scalably solve the alignment problem.
 
 visual recognition -> cifar10
 algorithm learning and execution (learning with/without execution trace)-> math competitions 
 long term memory
-compositional generaliaiton -> scan
+compositional generalization -> scan
 length generalization -> parity
 perfect information two player zero sum game -> Go
 sample efficiency -> arc
@@ -74,5 +84,10 @@ and make no mistake, this doesn't mean that academic papers will just become pro
 however, a concern is that the researchers will use the ai optimizers to optimize against the test benchmarks (which they most do already although through human optimization), 
 
 i wouldn't call myself a very "imaginative" kind. it's hard for me to assign non-zero probability to events that i can't imagine how they would happen. alphaevolve was the trigger that made me think seriously about significant acceleration of research, and including ai research. 
+
+
+
+research questions i would want ai to answer:
+- 
 
 

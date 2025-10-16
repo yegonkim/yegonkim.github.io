@@ -1,11 +1,11 @@
 ---
-title: World Model for LLMs
+title: Minimal Rogue AI
 categories: Artificial Intelligence
 date: 2025-10-15
 math: true
 published: false
 ---
 
-Something I find annoying quite often is that people expect AI to be better than a human at some task, when they don't give to the AI the same amount or kind of information that is given to a human during learning or execution of the task.
+what's the least amount of capability an ai needs to be a serious threat to humanity?
+i.e. to be able to escape human control, and acquire resources to improve itself and avoid shutdown.
 
-we still don't know how to leverage the full privileged knowledge that can be given to AI systems at training time, e.g. code execution traces
