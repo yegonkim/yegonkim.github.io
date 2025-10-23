@@ -1,5 +1,5 @@
 ---
-title: 
+title: Automating Research through Benchmark Optimization
 categories: Artificial Intelligence
 date: 2025-10-15
 math: true
@@ -8,6 +8,9 @@ published: false
 
 Qs:
 how clear is the line between benchmarks that evaluate and benchmarks that innovate?
+
+
+academia is highly inefficient. mostly due to communication and incentive problems.
 
 
 i used to think improving capability A by using capability A is not possible, that it would violate some sort of no-free-lunch theorem. but this might not be the case. if A depends on subcapabilities B and C, then A could be used to improve B and C, which in turn improves A.
@@ -86,8 +89,4 @@ however, a concern is that the researchers will use the ai optimizers to optimiz
 i wouldn't call myself a very "imaginative" kind. it's hard for me to assign non-zero probability to events that i can't imagine how they would happen. alphaevolve was the trigger that made me think seriously about significant acceleration of research, and including ai research. 
 
 
-
-research questions i would want ai to answer:
-- 
-
-
+we now should think not of "in which environments will gradient descent lead to our desired capabilities?", but "which environments/fields/problems will lead to the discovery of our desired capabilities when optimized against by human/ai researchers?"
