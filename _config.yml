@@ -21,10 +21,10 @@ timezone:
 
 title: "Yegon Kim"
 
-tagline: " AI / Physics / Philosophy "   # it will display as the sub-title
+tagline: " Blog "   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A blog on AI, physics, and other stuff I'm interested in
+  Blog of Yegon Kim.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://yegonkim.github.io'
