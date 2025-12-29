@@ -7,7 +7,8 @@ published: true
 ---
 
 Alignment research, especially research on practical alignment methods for current AI systems, contributes significantly to AI progress, and will do so even more in the coming future.
-For instance, alignment research will probably be a major contributor to building automated researchers, since evaluating research is a hard task and there are all [kinds](https://arxiv.org/abs/2406.10162) [of](https://openai.com/index/chain-of-thought-monitoring/) [ways](https://x.com/SakanaAILabs/status/1892992938013270019) AIs could perform adversarial optimization against our evaluation schemes.
+For instance, [RLHF](https://arxiv.org/abs/1706.03741), which was proposed in 2017, turned out to be a crucial ingredient of making LLMs actually useful, [5 years later](https://arxiv.org/abs/2203.02155).
+Alignment research will also be a major contributor to building automated researchers, since evaluating research is a hard task and there are all [kinds](https://arxiv.org/abs/2406.10162) [of](https://openai.com/index/chain-of-thought-monitoring/) [ways](https://x.com/SakanaAILabs/status/1892992938013270019) AIs could perform adversarial optimization against our evaluation schemes.
 Automated AI researchers will further accelerate AI progress, and *could* even [lead to a fast takeoff](https://www.forethought.org/research/will-ai-r-and-d-automation-cause-a-software-intelligence-explosion).
 
 What if we fail to align the automated researchers?
