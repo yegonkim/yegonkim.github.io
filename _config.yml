@@ -112,6 +112,8 @@ assets:
 
 pwa:
   enabled: true   # the option for PWA feature
+  cache:
+    enabled: false
 
 paginate: 10
 
