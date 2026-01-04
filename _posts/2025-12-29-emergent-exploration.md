@@ -1,5 +1,5 @@
 ---
-title: Learned Exploration
+title: Emergent Exploration
 categories: Artificial Intelligence
 date: 2025-12-29
 math: true
