@@ -1,0 +1,18 @@
+pure theory - science - engineering
+why science is the hardest but also the most useful
+why you need a theory - to make hypotheses, enabling science
+good science is what makes a rocket fly. not just trial and error.
+
+my thoughts on long term memory and continual learning
+incentive to store in a format that's useful for later
+without learning happening somewhere, you can just do rag
+
+learning with verbal feedback
+from the perspective of mdp
+1 bit learning and world model, does model-free rl on multi-step environment provide more than 1 bit? how do we formalize the information in this case?
+
+two things i was puzzled about in undergrad
+no free lunch and labels in the brain
+
+
+
