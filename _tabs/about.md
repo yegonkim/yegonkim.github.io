@@ -27,7 +27,7 @@ I have a passion for building technology that can empower individuals, in partic
 * **Yegon Kim**, Juho Lee,\
 *Preprint*, [A Model-Free Universal AI](https://arxiv.org/abs/2602.23242)
 * **Yegon Kim**, Juho Lee,\
-*ICLR 2026 Workshop Principled Design for Trustworthy AI*, [Mitigating Legibility Tax with Decoupled Prover-Verifier Games](https://arxiv.org/abs/2602.23248)
+*ICLR 2026 Workshop Trustworthy AI*, [Mitigating Legibility Tax with Decoupled Prover-Verifier Games](https://arxiv.org/abs/2602.23248)
 * **Yegon Kim**, Seungyoo Lee, Chaeyun Jang, Hyungi Lee, Juho Lee,\
 *Preprint*, [Parallel Test-Time Scaling with Multi-Sequence Verifiers]()
 * Chaeyun Jang, Moonseok Choi, **Yegon Kim**, Hyungi Lee, Juho Lee,\
