@@ -29,7 +29,7 @@ I have a passion for building technology that can empower individuals, in partic
 * **Yegon Kim**, Juho Lee,\
 *ICLR 2026 Workshop Trustworthy AI*, [Mitigating Legibility Tax with Decoupled Prover-Verifier Games](https://arxiv.org/abs/2602.23248)
 * **Yegon Kim**, Seungyoo Lee, Chaeyun Jang, Hyungi Lee, Juho Lee,\
-*Preprint*, [Parallel Test-Time Scaling with Multi-Sequence Verifiers]()
+*Preprint*, [Parallel Test-Time Scaling with Multi-Sequence Verifiers](https://arxiv.org/abs/2603.03417)
 * Chaeyun Jang, Moonseok Choi, **Yegon Kim**, Hyungi Lee, Juho Lee,\
 *ICML 2025 Workshop R2-FM*, [Verbalized Confidence Triggers Self-Verification: Emergent Behavior Without Explicit Reasoning Supervision](https://www.arxiv.org/abs/2506.03723)
 * **Yegon Kim**, Hyunsu Kim, Gyeonghoon Ko, Juho Lee,\
