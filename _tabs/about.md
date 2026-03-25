@@ -36,3 +36,9 @@ I have a passion for building technology that can empower individuals, in partic
 *ICML 2025*, [Active Learning with Selective Time-Step Acquisition for PDEs](https://arxiv.org/abs/2511.18107)
 * Hyunsu Kim, **Yegon Kim**, Hongseok Yang, Juho Lee,\
 *ICML 2024*, [Variational Partial Group Convolutions for Input-Aware Partial Equivariance of Rotations and Color-Shifts](https://arxiv.org/abs/2407.04271)
+
+## Talks
+
+* A Model-Free Universal AI. Invited talk for [UAI regular meeting](https://uaiasi.com/), 2026. [[slides](/assets/pdf/talks/UAI_presentation_2026_03_23.pdf)]
+* Active Learning with Selective Time-Step Acquisition for PDEs. Master's Thesis Defense, KAIST, 2025. [[slides](/assets/pdf/talks/ms_defense.pdf)]
+
