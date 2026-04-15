@@ -41,4 +41,7 @@ I have a passion for building technology that can empower individuals, in partic
 
 * A Model-Free Universal AI. Invited talk for [UAI regular meeting](https://uaiasi.com/), 2026. [[slides](/assets/pdf/talks/UAI_presentation_2026_03_23.pdf)]
 * Active Learning with Selective Time-Step Acquisition for PDEs. Master's Thesis Defense, KAIST, 2025. [[slides](/assets/pdf/talks/ms_defense.pdf)]
-
+* Lab reading group 2026/03/10: [AI Safety via Debate](https://arxiv.org/abs/1805.00899). [[slides](/assets/pdf/talks/reading group_26_3_10.pdf)]
+* Lab reading group 2025/10/01: [AlphaEvolve](https://arxiv.org/abs/2506.13131). [[slides](/assets/pdf/talks/reading group_25_10_01.pdf)]
+* Lab reading group 2025/01/08: [On the Measure of Intelligence](https://arxiv.org/abs/1911.01547). [[slides](/assets/pdf/talks/reading group_25_1_8.pdf)]
+* Lab reading group 2024/10/15: [An Observation on Generalization](https://www.youtube.com/watch?v=AKMuA_TVz3A). [[slides](/assets/pdf/talks/reading group_24_10_15.pdf)]
