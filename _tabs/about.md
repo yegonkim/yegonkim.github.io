@@ -6,9 +6,9 @@ order: 4
 
 Hi, I am a PhD student researching artificial intelligence at KAIST. I write posts about interesting problems or ideas after I think about them for a while. I also write educational posts, e.g. on physics.
 
-These days I spend most of time wondering about the landscape of "agents".
-Recently I constructed a [model-free algorithm that performs well in general environments](https://arxiv.org/abs/2602.23242), showing that model-free policy iteration is a generally applicable concept, like [model-based planning](https://link.springer.com/book/10.1007/b138233).
-Some questions I'm currently interested in are: how values might become more [coherent and systematized](https://www.alignmentforum.org/posts/J2kpxLjEyqh6x3oA4/value-systematization-how-values-become-coherent-and) in agents that don't explicitly optimize for them, e.g. LLMs, especially values that affect long-horizon behavior for which supervision is very sparse; modeling a single agent as a system of subagents that maximize their own utilities; self-awareness/introspection and their implications for decision-making; and how this all relates to [bounded rationality](https://arxiv.org/abs/cs/9505103), [embedded agency](https://www.lesswrong.com/posts/i3BTagvt3HbPMx6PN/embedded-agency-full-text-version), and deep learning.
+These days I spend most of time wondering about how diverse the landscape of "agents" can be.
+My recent work on [model-free universal AI](https://arxiv.org/abs/2602.23242) partly shares this motivation.
+Currently, my wish is to elucidate general principles that can be applied to boundedly rational agents or multi-agent systems.
 
 On the practical side, I have a keen interest in the ability of AIs to understand human minds at an intuitive level, a.k.a. their theory of mind. This has downstream implications for psychiatry, education, alignment, etc. I also have a broad interest in AI safety, and one particular issue that I find pressing is: that the society is already hard enough to understand, and it will only become harder to understand with the proliferation of AIs. Studying the properties of current AI systems in multi-agent environments, and developing tools to understand them, therefore seems crucial.
 Some other topics I had previously been interested in are AI superforecasting, and [scalable oversight](https://arxiv.org/abs/2602.23248).
