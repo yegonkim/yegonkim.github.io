@@ -6,11 +6,10 @@ order: 4
 
 Hi, I am a PhD student researching artificial intelligence at KAIST. I write posts about interesting problems or ideas after I think about them for a while. I also write educational posts, e.g. on physics.
 
-These days I spend most of time wondering about how diverse the landscape of "agents" can be.
-My recent work on [model-free universal AI](https://arxiv.org/abs/2602.23242) partly shares this motivation.
-Currently, my wish is to elucidate general principles that can be applied to boundedly rational agents or multi-agent systems.
+These days I spend most of time wondering how to broaden the scope of "agents" that can be talked about formally.
+My recent work on [model-free universal AI](https://arxiv.org/abs/2602.23242) was inspired by this motivation.
 
-On the practical side, I have a keen interest in the ability of AIs to understand human minds at an intuitive level, a.k.a. their theory of mind. This has downstream implications for psychiatry, education, alignment, etc. I also have a broad interest in AI safety, and one particular issue that I find pressing is: that the society is already hard enough to understand, and it will only become harder to understand with the proliferation of AIs. Studying the properties of current AI systems in multi-agent environments, and developing tools to understand them, therefore seems crucial.
+On the practical side, I have a keen interest in the ability of AIs to understand human minds at an intuitive level, a.k.a. their theory of mind. This has downstream implications for psychiatry, education, alignment, etc. I also have a broad interest in AI safety, and one particular issue that I find pressing is that the societal phenomena will only become harder to interpret with the proliferation of agentic AIs. It therefore seems crucial to study the properties of current AI systems in multi-agent environments and develop tools to understand them.
 Some other topics I had previously been interested in are AI superforecasting, and [scalable oversight](https://arxiv.org/abs/2602.23248).
 
 ## Education
@@ -31,10 +30,12 @@ Some other topics I had previously been interested in are AI superforecasting, a
 
 * **Yegon Kim**, Juho Lee,\
 *Preprint*, [A Model-Free Universal AI](https://arxiv.org/abs/2602.23242)
-* **Yegon Kim**, Juho Lee,\
-*ICLR 2026 Workshop Trustworthy AI*, [Mitigating Legibility Tax with Decoupled Prover-Verifier Games](https://arxiv.org/abs/2602.23248)
 * **Yegon Kim**, Seungyoo Lee, Chaeyun Jang, Hyungi Lee, Juho Lee,\
 *Preprint*, [Parallel Test-Time Scaling with Multi-Sequence Verifiers](https://arxiv.org/abs/2603.03417)
+* Chaeyun Jang, Moonseok Choi, **Yegon Kim**, Seungyoo Lee, Juho Lee, Hyungi Lee,\
+*ICML 2026*, [Confidence is Not Universal: Task-Dependent Calibration and Emergent Behavior in LLMs](https://icml.cc/virtual/2026/poster/66660)
+* **Yegon Kim**, Juho Lee,\
+*ICLR 2026 Workshop Trustworthy AI*, [Mitigating Legibility Tax with Decoupled Prover-Verifier Games](https://arxiv.org/abs/2602.23248)
 * Chaeyun Jang, Moonseok Choi, **Yegon Kim**, Hyungi Lee, Juho Lee,\
 *ICML 2025 Workshop R2-FM*, [Verbalized Confidence Triggers Self-Verification: Emergent Behavior Without Explicit Reasoning Supervision](https://www.arxiv.org/abs/2506.03723)
 * **Yegon Kim**, Hyunsu Kim, Gyeonghoon Ko, Juho Lee,\
