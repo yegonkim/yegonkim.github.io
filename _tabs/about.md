@@ -9,7 +9,7 @@ Hi, I am a PhD student researching artificial intelligence at KAIST. I write pos
 These days I spend most of time wondering how to broaden the scope of "agents" that can be talked about formally.
 My recent work on [model-free universal AI](https://arxiv.org/abs/2602.23242) was inspired by this motivation.
 
-On the practical side, I have a keen interest in the ability of AIs to understand human minds at an intuitive level, a.k.a. their theory of mind. This has downstream implications for psychiatry, education, alignment, etc. I also have a broad interest in AI safety, and one particular issue that I find pressing is that the societal phenomena will only become harder to interpret with the proliferation of agentic AIs. It therefore seems crucial to study the properties of current AI systems in multi-agent environments and develop tools to understand them.
+On the practical side, I have a keen interest in the ability of AIs to understand human minds at an intuitive level, a.k.a. their theory of mind. This has downstream implications for psychiatry, education, alignment, etc. I also have a broad interest in AI safety, and one particular issue that I find pressing is: societal phenomena will only become harder to interpret with the proliferation of agentic AIs. It therefore seems crucial to study the properties of current AI systems in large-scale multi-agent environments and develop tools to understand them.
 Some other topics I had previously been interested in are AI superforecasting, and [scalable oversight](https://arxiv.org/abs/2602.23248).
 
 ## Education
