@@ -26,7 +26,7 @@ $$
 = \arg \min_\pi \mathbb{E}_{\nu \sim w(\cdot)} \left[ D (\nu^\pi \parallel \chi) \right] 
 .$$
 
-The KL divergence $D_{KL}$ is a natural choice for $D$, since it can be decomposed into a sum of policy divergence and environment divergence at each time step:
+The KL divergence $D_{KL}$ is a natural choice for $D$, since it can be decomposed into a sum of policy divergence and environment divergence terms at each time step:
 
 $$
 D_{KL} (\nu^\pi \parallel \chi)
@@ -65,7 +65,10 @@ $$
 $$
 Q^\ast(h_{<t}, a_t) = \mathbb E_{\nu \sim w(\cdot \mid h_{<t} a_t)} \left[
     -D_{KL}(\nu(\cdot \mid h_{<t} a_t) \parallel \chi(\cdot \mid h_{<t} a_t))
-    + V^\ast(h_{<t} a_t)
+    + 
+    \mathbb E_{e_t \sim \nu(\cdot \mid h_{<t} a_t)} \left[
+        V^\ast(h_{<t} a_t e_t)
+    \right]
 \right]
 $$
 
@@ -86,7 +89,7 @@ A common choice for $\chi_0$ is the uniform distribution over actions, or some b
 A more interesting choice is an expressive prior like the mixture distribution $\xi^\zeta$, where $\xi= \sum_{\nu\in\mathcal M} w(\nu) \, \nu$ and $\zeta= \sum_{\pi \in \mathcal P} \omega(\pi) \, \pi$. This way, the agent is looking for states where the agent itself can be accurately predicted by $\zeta$, and the environment accurately predicted by $\xi$ (similar to the [suprise-minimizing agent](https://michelevannucci.me/projects/master-thesis/) except that we are trying to distribution match to $\xi$ instead of maximizing evidence).
 A simple approximation with neural nets would be to train a deep ensemble of probabilistic world models, and use negative [information gain](https://arxiv.org/pdf/1703.02910) as the reward.
 
-When the optimal policy $\pi^\ast$ is not dominated by $\zeta$, it will seek out states where it can approximately model itself with elements in $\mathcal P$ (without losing too much reward). For instance, if $\mathcal P$ is the class of all computable policies, the agent would 1) be regularized towards computable policies, and also 2) seek out states $h_{<t}$ where one can perform decently by following an approximately computable function for time $\geq t$.
+When the optimal policy $\pi^\ast$ is not dominated by $\zeta$, it will seek out states where it can approximately model itself with elements in $\mathcal P$ (without losing too much reward). For instance, if $\mathcal P$ is the class of all computable policies, the agent would 1) be regularized towards computable policies, and also 2) seek out states $h_{<t}$ where one can perform decently, across most of the probable futures, by approximately following a computable function for time $\geq t$.
 Similarly, max-entropy RL does not simply smoosh out the not-max-entropy optimal policy with uniform noise; it also encourages the policy to seek out states where it's "fine" to be a bit stochastic without incurring too much loss in the reward.
 This also means that the agent will prefer states where it is robust to random perturbations.
 Finally, it's interesting to note that a highly expressive base policy $\pi_0$ can be viewed as a mixture $\zeta$ of simpler policies, e.g. a large language model with [multiple personas](https://www.anthropic.com/research/persona-selection-model).
