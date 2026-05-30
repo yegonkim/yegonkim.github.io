@@ -56,7 +56,7 @@ One thing that's really nice about the objective described above is that the bes
 This generally doesn't hold for an arbitrary divergence $D$.
 Another interesting case is the *pushforward* distribution matching objective $\pi^* = \arg \min_\pi \mathbb{E}\_{\nu \sim w(\cdot)} \left[ D\_{KL}(f_\\# \nu^\pi \parallel \chi) \right]$, where $f$ is some function that maps trajectories to some other space, e.g. $f(h) = o_T$. In that case, the best strategy at time step $t$ depends on its profile at time steps $<t$, making the problem [harder](https://arxiv.org/abs/2201.13259).
 
-Anyways, thanks to this nice property, we can derive the soft Bellman equations:
+Anyways, thanks to this nice property satisfied by the full trajectory distribution matching objective, we can derive the soft Bellman equations:
 
 $$
 V^\ast (h_{<t}) = \log \sum_{a_t} \chi(a_t \mid h_{<t}) \exp \left(Q^\ast(h_{<t}, a_t) \right)
