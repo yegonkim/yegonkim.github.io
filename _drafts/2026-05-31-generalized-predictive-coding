@@ -6,8 +6,10 @@ math: true
 published: true
 ---
 
-This is an attempt to extract the core of predictive coding, by considering the computationally unbounded setting where we can perform exact Bayesian inference.
-(https://www.bndu.ox.ac.uk/sites/default/files/pdf_files/Whittington%20Bogacz%202017_Neural%20Comput.pdf)
+[Whittington and Bogacz]((https://www.bndu.ox.ac.uk/sites/default/files/pdf_files/Whittington%20Bogacz%202017_Neural%20Comput.pdf)) showed that predictive coding approximates backprop in the infinite precision limit.
+This post is my attempt to digest the paper in the language of discrete variables.
 
 ***
+
+
 
