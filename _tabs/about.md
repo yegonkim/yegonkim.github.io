@@ -29,15 +29,13 @@ Some other topics I had previously been interested in are AI superforecasting, a
 ## Publications
 
 * **Yegon Kim**, Juho Lee,\
-*Preprint*, [A Model-Free Universal AI](https://arxiv.org/abs/2602.23242)
+*UAI 2026*, [A Model-Free Universal AI](https://arxiv.org/abs/2602.23242)
 * **Yegon Kim**, Seungyoo Lee, Chaeyun Jang, Hyungi Lee, Juho Lee,\
 *Preprint*, [Parallel Test-Time Scaling with Multi-Sequence Verifiers](https://arxiv.org/abs/2603.03417)
 * Chaeyun Jang, Moonseok Choi, **Yegon Kim**, Seungyoo Lee, Juho Lee, Hyungi Lee,\
 *ICML 2026*, [Confidence is Not Universal: Task-Dependent Calibration and Emergent Behavior in LLMs](https://icml.cc/virtual/2026/poster/66660)
 * **Yegon Kim**, Juho Lee,\
 *ICLR 2026 Workshop Trustworthy AI*, [Mitigating Legibility Tax with Decoupled Prover-Verifier Games](https://arxiv.org/abs/2602.23248)
-* Chaeyun Jang, Moonseok Choi, **Yegon Kim**, Hyungi Lee, Juho Lee,\
-*ICML 2025 Workshop R2-FM*, [Verbalized Confidence Triggers Self-Verification: Emergent Behavior Without Explicit Reasoning Supervision](https://www.arxiv.org/abs/2506.03723)
 * **Yegon Kim**, Hyunsu Kim, Gyeonghoon Ko, Juho Lee,\
 *ICML 2025*, [Active Learning with Selective Time-Step Acquisition for PDEs](https://arxiv.org/abs/2511.18107)
 * Hyunsu Kim, **Yegon Kim**, Hongseok Yang, Juho Lee,\
