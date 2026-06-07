@@ -14,9 +14,11 @@ I am half-forcing myself to post it nevertheless for the sake of posting somethi
 ***
 
 Consider a deterministic feedforward model:
+
 $$
 y = f_L \circ f_{L-1} \circ \cdots \circ f_1 (x)
 $$
+
 where $f_l$ must be chosen from the hypothesis class $\mathcal{H}_l$.
 <!-- Usually, each $\mathcal{H}_l$ is a rather restricted class, but their composition can express a much wider variety of functions. -->
 <!-- For instance, it could be the class of all linear functions from $\mathbb{R}^n$ to $\mathbb{R}^m$ (perhaps composed with a nonlinear activation function), the class of Boolean circuits of depth $\leq \tilde d$ from $\mathbb{B}^n$ to $\mathbb{B}^m$, the class of Turing machines with running time $\leq \tilde t$, etc.
@@ -91,6 +93,7 @@ $$
 =
 \mathcal F.
 $$
+
 A profile that's stable under the coalition of all players, with transfers, must be an optimum of $\mathcal F$ by definition.
 
 <!-- Yes, because now if there is a profile $\sigma'$ with $\mathcal F' < \mathcal F$, then $\sum_l c_l' < \sum_l c_l$, so all players can coalesce to deviate to $\sigma'$ and share the cost reduction in such a way that each player is better off. -->
