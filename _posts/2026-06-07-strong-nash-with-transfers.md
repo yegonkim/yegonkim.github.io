@@ -8,8 +8,7 @@ published: true
 
 I don't know much about game theory, so 
 this is an attempt to get familiar with it, through the question "in what sense can players who bear the cost of their local objectives coalesce to optimize a coherent global objective?"
-There's nothing really insightful here, and the result is much less general than I had hoped for.
-I am half-forcing myself to post it nevertheless for the sake of posting something regularly.
+Unfortunately, the result is much less general than I had hoped for, but perhaps this isn't too surprising.
 
 ***
 
@@ -110,15 +109,6 @@ Suppose a player $z_l$ outside the coalition had its cost $\ell_{l+1} + \ell_l$ 
 
 That strong Nash with transfers implies optimality is trivial, but not the converse. Sure, the optimum would be stable under deviations by the coalition of *all* players. But it's not clear (and not always the case in general) that it's stable under a coalition by any *subset* of players. This was possible in our case because we used the zero-infinity loss, where an increase in cost of a player outside the coalition implies an increase in cost of at least one player inside the coalition, by $\infty$.
 
-<!-- Essentially, we were looking at a constrained optimization problem,
-
-$$
-\min_{f_1, \dots, f_L} \sum_{l=1}^L c(f_l)
-\quad \text{subject to }
-f_L \circ f_{L-1} \circ \cdots \circ f_1 (x^{(i)}) = y^{(i)} \quad \forall i.
-$$
-
-The zero-infinity loss encodes the hard constraint, so that any coalition that violates the constraint would have to pay a cost of $\infty$. Allowing for transfers ensures that $\sum c(f_l)$ can be optimized globally, without falling into local optima. -->
-
 A result I had initially hoped for was something more general, where $f_l$ are stochastic maps $Z_{l-1} \to \Delta Z_l$ and the loss $\ell$ is negative log-likelihood. This would be variational inference in a hierarchical latent variable model, with the approximate posterior $q(z)$ as a point estimate. Unfortunately, none of our ideas above work in this case.
-This shouldn't be too surprising. The most natural framing of the problem is a fully cooperative game where all players share the same objective $\mathcal F$, but we were forcefully trying to turn it into a game where each player only bears a local cost.
+This isn't so surprising.
+The most natural framing of the problem is a fully cooperative game where all players share the same objective $\mathcal F$, but we were forcefully trying to turn it into a game where each player only bears a local cost.
