@@ -1,6 +1,6 @@
 ---
 title: A Theory of Unsupervised Learning
-categories: Artificial Intelligence
+categories: ["Artificial Intelligence"]
 date: 2024-11-01
 math: true
 published: true

@@ -1,6 +1,6 @@
 ---
 title: Noether's Theorem and Quasi-Symmetry
-categories: Physics
+categories: ["Physics"]
 date: 2025-10-10
 math: true
 published: true

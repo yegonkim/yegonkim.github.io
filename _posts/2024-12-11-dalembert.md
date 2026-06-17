@@ -1,6 +1,6 @@
 ---
 title: D'Alembert's Principle and the Principle of Least Action
-categories: Physics
+categories: ["Physics"]
 date: 2024-12-12
 math: true
 published: true

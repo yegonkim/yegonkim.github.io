@@ -1,6 +1,6 @@
 ---
 title: Strong Nash with Transfers
-categories: Artificial Intelligence
+categories: ["Artificial Intelligence"]
 date: 2026-06-07
 math: true
 published: true
@@ -107,8 +107,8 @@ Suppose a player $z_l$ outside the coalition had its cost $\ell_{l+1} + \ell_l$ 
 
 ### Conclusion
 
-That strong Nash with transfers implies optimality is trivial, but not the converse. Sure, the optimum would be stable under deviations by the coalition of *all* players. But it's not clear (and not always the case in general) that it's stable under a coalition by any *subset* of players. This was possible in our case because we used the zero-infinity loss, where an increase in cost of a player outside the coalition implies an increase in cost of at least one player inside the coalition, by $\infty$.
+That strong Nash with transfers implies optimality is trivial, but the converse doesn't hold in general. The converse did hold in our case because we used the zero-infinity loss, where an increase in cost of a player outside the coalition implies an increase in cost of at least one player inside the coalition, by $\infty$.
 
 A result I had initially hoped for was something more general, where $f_l$ are stochastic maps $Z_{l-1} \to \Delta Z_l$ and the loss $\ell$ is negative log-likelihood. This would be variational inference in a hierarchical latent variable model, with the approximate posterior $q(z)$ as a point estimate. Unfortunately, none of our ideas above work in this case.
 This isn't so surprising.
-The most natural framing of the problem is a fully cooperative game where all players share the same objective $\mathcal F$, but we were forcefully trying to turn it into a game where each player only bears a local cost.
+The most natural framing of the problem is a fully cooperative game where all players share the same objective $\mathcal F$, but we were forcefully trying to turn it into a game where the cost is local.

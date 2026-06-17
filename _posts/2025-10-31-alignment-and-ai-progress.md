@@ -1,6 +1,6 @@
 ---
 title: Alignment Research Accelerates AI Progress
-categories: Artificial Intelligence
+categories: ["Artificial Intelligence"]
 date: 2025-10-31
 math: true
 published: true

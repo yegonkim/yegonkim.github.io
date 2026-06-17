@@ -4,23 +4,22 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hi, I am a PhD student researching artificial intelligence at KAIST. I write posts about interesting problems or ideas after I think about them for a while. I also write educational posts, e.g. on physics.
+Hi, I am a PhD student researching artificial intelligence at KAIST. I've also started working at AIXI Labs, a research lab focused on advancing theories to better understand and ultimately reduce AI X-risks.
 
-These days I spend most of time wondering how to broaden the scope of "agents" that can be talked about formally.
-My recent work on [model-free universal AI](https://arxiv.org/abs/2602.23242) was inspired by this motivation.
-
-On the practical side, I have a keen interest in the ability of AIs to understand human minds at an intuitive level, a.k.a. their theory of mind. This has downstream implications for psychiatry, education, alignment, etc. I also have a broad interest in AI safety, and one particular issue that I find pressing is: societal phenomena will only become harder to interpret with the proliferation of agentic AIs. It therefore seems crucial to study the properties of current AI systems in large-scale multi-agent environments and develop tools to understand them.
-Some other topics I had previously been interested in are AI superforecasting, and [scalable oversight](https://arxiv.org/abs/2602.23248).
+These days I spend most of my time wondering how to broaden the scope of "agents" that can be talked about formally.
+I'm also interested in theory of mind, multi-agent systems, and AI safety.
 
 ## Education
 
 ### Korea Advanced Institute of Science and Technology (KAIST)
 **Ph.D. in Graduate School of Artificial Intelligence**  
-*2025 - Present*
+Advised by Juho Lee  
+*2025 - Present*  
 
 ### Korea Advanced Institute of Science and Technology (KAIST)
 **M.S. in Graduate School of Artificial Intelligence**  
-*2023 - 2025*
+Advised by Juho Lee  
+*2023 - 2025*  
 
 ### Korea Advanced Institute of Science and Technology (KAIST)
 **B.S. in Mathematics** | *Summa Cum Laude*   

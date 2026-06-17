@@ -1,6 +1,6 @@
 ---
 title: Writing Something is Better than Writing Nothing
-categories: Personal Thoughts
+categories: ["Personal Thoughts"]
 date: 2025-05-22
 math: true
 published: true

@@ -1,6 +1,6 @@
 ---
 title: Rethinking Verifiability
-categories: Artificial Intelligence
+categories: ["Artificial Intelligence"]
 date: 2025-10-11
 math: true
 published: true

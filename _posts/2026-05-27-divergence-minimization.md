@@ -1,6 +1,6 @@
 ---
 title: Divergence Minimization
-categories: Artificial Intelligence
+categories: ["Artificial Intelligence"]
 date: 2026-05-27
 math: true
 published: true
