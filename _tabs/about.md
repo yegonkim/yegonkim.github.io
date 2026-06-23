@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hi, I am a PhD student researching artificial intelligence at KAIST. I've also started working at AIXI Labs, a research lab focused on advancing theories to better understand and ultimately reduce AI X-risks.
+Hi, I am a PhD student researching artificial intelligence at KAIST. I've also started working at AIXI Labs, a research lab focused on advancing theories to better understand and ultimately reduce AI x-risks.
 
 These days I spend most of my time wondering how to broaden the scope of "agents" that can be talked about formally.
 I'm also interested in theory of mind, multi-agent systems, and AI safety.
