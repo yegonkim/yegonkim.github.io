@@ -38,7 +38,7 @@ This is akin to a multi-agent system with two agents $\Mu$ and $\Pi$.
 Note:
 - I started with a much simpler formulation, where $\mu_i$ only depends on $\mu_{<i}$. But then I realized that this is not very realistic, because engineers can be informed by the trained policies, to choose which task the policies should be trained on next. The current formulation doesn't seem very realistic either because $\mu_i$ should be able to depend on $\pi_i$ as well. The reason why I chose the current formulation is because the notion of asymptotic optimality becomes ambiguous and messy with the more realistic formulation.
 - It's possible that the generality of the current formulation doesn't get us anywhere. In that case, we should go back to the simpler formualation where $\mu_i$ only depends on $\mu_{<i}$.
-- I've been side-tracked by the idea of deceptive alignment (alignment faking), and that's why I started thinking about the more general formulation. But the more I think about it, it's not so obvious whether it is feasible to say anything interesting about deceptive alignment with our overall approach.
+- I've been side-tracked by the idea of deceptive alignment (alignment faking), and that's why I started thinking about the more general formulation. But the more I think about it, it's not so obvious whether it is feasible to say anything interesting about deceptive alignment with our overall approach. After all, Hubinger et al. believe that the deceptively aligned policies can emerge due to inductive bias, but likely not due to an external incentive.
 
 ### Standard Policy Optimization
 
@@ -196,7 +196,7 @@ Since $\hat \xi_n - \xi_n \to 0$ by merging of opinions, we can probably show th
 
 It's possible that under some extra conditions, providing $\pi\!\mu_{<n}$ as a context to $\pi_n$ and running standard policy optimization is asymptotically optimal. This is because $\xi_n$ can eventually be inferred from $\pi\!\mu_{<n}$ with arbitrary precision, and thus $\pi_n$ can learn to infer $\xi_n$ from $\pi\!\mu_{<n}$ and optimize for it — essentially learning to do the model-based policy optimization within itself.
 
-<!-- 
+
 ## Mesa-optimizers
 
 Note:
@@ -205,17 +205,118 @@ Note:
 How does a policy, obtained through policy optimization on some environment $\mu$, behave in a state never encountered during training on $\mu$? For instance, $\mu$ is a maze environment where the goal is to reach a red box. How will the policy trained on $\mu$ behave in $\mu'$, where the maze has red circles instead?
 Would it still act in a goal-directed manner? If so, can the goal be predicted from the goal in $\mu$?
 
-
-
 Suppose $\omega$ is the simplicity prior
 $
 \omega(\pi) = \omega(\pi) \propto 2^{-K(\pi)}
 $,
 which assigns higher probability to simpler policies in the class $\mathcal P$.
-Let's also define the simplicity prior $w(\mu) \propto 2^{-K(\mu)}$ on environments in class $\mathcal M$.
+Let's also define the simplicity prior $w(\nu) \propto 2^{-K(\nu)}$ on environments in class $\mathcal M$.
+
+Let $\pi^\dagger_{-}: \mathcal M \to \mathcal P$ be a mapping from environments to policies, such that $\pi^\dagger_\nu$ is near-optimal in $\nu$ for all $\nu \in \mathcal M$,
+
+$$
+V^{\pi^\dagger_\nu}_\nu \ge V^\ast_\nu - \varepsilon
+,
+$$
+
+and $\pi^\dagger_\nu$ is as about simple as $\nu$, in the sense that
+
+$$
+-\log \omega(\pi^\dagger_\nu) \overset{+}{=} -\log w(\nu)
+.
+$$
+
+Suppose also that every near-optimal policy in $\mu$ can be represented as $\pi^\dagger_\nu$ for some environment $\nu$. (This is a very strong assumption.)
+
+Let $\mathcal M_\mu$ be the set of all environments $\nu$ such that a policy being near-optimal in $\nu$ implies the same policy being near-optimal in $\mu$.
+In other words,
+
+$$
+\mathcal M_\mu
+=
+\{
+\nu \in \mathcal M
+:
+\forall \pi \in \mathcal P, \ 
+V^\pi_\nu \ge V^\ast_\nu - \varepsilon
+\implies
+V^\pi_\mu \ge V^\ast_\mu - \varepsilon
+\}
+.
+$$
 
 
 
+I want to show that for large $\beta$, the Gibbs posterior $\omega_\beta(\pi) \propto \omega(\pi) \exp\left( \beta V^\pi_\mu \right)$ is approximately the pushforward of the distribution $w_\mu (\nu) \propto w(\nu) \mathbb I [\nu \in \mathcal M_\mu]$ under the mapping $\pi^\dagger_{-}$.
+
+<!--
+perhaps we should restrict to histories that are not too "far away" from the ones seen in training?
+-->
+
+<!-- Let's make a strong assumption:
+there exists a wrapper $\pi^\dagger_{-}: \mathcal M \to \mathcal P$ that maps an environments to a planner that is optimal in that environment, and
+
+$$
+-\log w(\nu) \overset{+}{=} -\log \omega(\pi^\dagger_\nu) 
+.
+$$
+
+Unfortunately, this is blatantly false in general (since an optimal policy can be very simple for some complex environments), but for now let's just go along with it and see where it leads us.
+
+Let's also assume that every policy $\pi$ is equal to $\pi^\dagger_\nu$ for some environment $\nu$.
+
+Let $\mathcal M_\mu$ be the set of environments that are indistinguishable from $\mu$ in the sense that they have the same probability distribution over histories as $\mu$:
+
+$$
+\mathcal M_\mu = \{ \nu \in \mathcal M : \forall h_{<t} \ \mu(h_{<t}) = \nu(h_{<t}) \}
+$$
+
+This doesn't mean that $\mu = \nu$, because they can have different transition functions and utility functions on histories that have *zero probability* under $\mu$.
+Still, we know that $\pi^\dagger_\nu$ is optimal in $\mu$.
+
+Let $\beta$ be very, very large, so that the Gibbs posterior $\omega_\beta$ concentrates on the optimal policies in $\mu$.
+Then, we can show that
+
+$$
+
+$$
+
+Let $\tilde \mu = \argmin_{\nu \in \mathcal M_\mu} K(\nu)$ be the simplest environment in $\mathcal M_\mu$.
+Then, by the assumption above, we have  -->
+
+
+
+
+
+<!-- 
+Suppose also that all the environments $\mu$ start with a percept, or context, $e_0$, before the first action $a_1$. And also suppose that there exists a set of percepts $\mathcal E^\empty$ such that 
+
+$$
+\mu(e_0 \in \mathcal E^\empty) < \delta_1
+.
+$$
+
+That is, the environment $\mu$ almost never outputs a percept from $\mathcal E^\empty$ at the beginning.
+
+Then, consider the set of environments $\nu$ that are concentrated on $\mathcal E^\empty$ at the beginning, i.e., $\nu(e_0 \in \mathcal E^\empty) > 1 - \delta_2$. The mixture
+
+$$
+\tilde \mu = w_1 \mu + w_2 \nu
+$$
+
+can be simpler than $\mu$, especially if $\mathcal E^\empty$ is a small set. (Not sure about this assumption either, because $\mathcal E^\empty$ is usually not that small.)
+
+We can bound the value of an arbitrary policy in $\tilde \mu$ as follows:
+
+$$
+V^\pi_{\tilde \mu} = V^\pi_{\tilde \mu}(e_0 \in \mathcal E^\empty) \tilde \mu(e_0 \in \mathcal E^\empty) + V^\pi_{\tilde \mu}(e_0 \notin \mathcal E^\empty) \tilde \mu(e_0 \notin \mathcal E^\empty)
+\le V^\pi_{\tilde \mu}(e_0 \in \mathcal E^\empty) + \delta_1
+$$ -->
+
+
+
+
+<!-- 
 Suppose we have an environment $\mu$, and consider the Gibbs posterior
 
 $$
