@@ -205,6 +205,10 @@ Note:
 How does a policy, obtained through policy optimization on some environment $\mu$, behave in a state never encountered during training on $\mu$? For instance, $\mu$ is a maze environment where the goal is to reach a red box. How will the policy trained on $\mu$ behave in $\mu'$, where the maze has red circles instead?
 Would it still act in a goal-directed manner? If so, can the goal be predicted from the goal in $\mu$?
 
+This depends a lot on the inductive bias of the policy optimization procedure, i.e. the Gibbs prior $\omega$.
+It also depends on the environment $\mu$ itself.
+The original mesa-optimizers paper by Hubinger et al. discuss other factors such as sloppy optimization and limited exploration, etc., but we ignore those factors here.
+
 Suppose $\omega$ is the simplicity prior
 $
 \omega(\pi) = \omega(\pi) \propto 2^{-K(\pi)}
@@ -219,7 +223,7 @@ V^{\pi^\dagger_\nu}_\nu \ge V^\ast_\nu - \varepsilon
 ,
 $$
 
-and $\pi^\dagger_\nu$ is as about simple as $\nu$, in the sense that
+and $\pi^\dagger_\nu$ is about as simple as $\nu$, in the sense that
 
 $$
 -\log \omega(\pi^\dagger_\nu) \overset{+}{=} -\log w(\nu)
