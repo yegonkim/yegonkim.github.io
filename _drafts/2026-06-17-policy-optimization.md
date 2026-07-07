@@ -35,10 +35,10 @@ This is akin to a multi-agent system with two agents $\Mu$ and $\Pi$.
 
 <!-- If we ever need a class of environment generators and policy generators, we will denote them by $\mathfrak M$ and $\mathfrak P$, respectively. -->
 
-Note:
+<!-- Note:
 - I started with a much simpler formulation, where $\mu_i$ only depends on $\mu_{<i}$. But then I realized that this is not very realistic, because engineers can be informed by the trained policies, to choose which task the policies should be trained on next. The current formulation doesn't seem very realistic either because $\mu_i$ should be able to depend on $\pi_i$ as well. The reason why I chose the current formulation is because the notion of asymptotic optimality becomes ambiguous and messy with the more realistic formulation.
 - It's possible that the generality of the current formulation doesn't get us anywhere. In that case, we should go back to the simpler formualation where $\mu_i$ only depends on $\mu_{<i}$.
-- I've been side-tracked by the idea of deceptive alignment (alignment faking), and that's why I started thinking about the more general formulation. But the more I think about it, it's not so obvious whether it is feasible to say anything interesting about deceptive alignment with our overall approach. After all, Hubinger et al. believe that the deceptively aligned policies can emerge due to inductive bias, but likely not due to an external incentive.
+- I've been side-tracked by the idea of deceptive alignment (alignment faking), and that's why I started thinking about the more general formulation. But the more I think about it, it's not so obvious whether it is feasible to say anything interesting about deceptive alignment with our overall approach. After all, Hubinger et al. believe that the deceptively aligned policies can emerge due to inductive bias, but likely not due to an external incentive. -->
 
 ### Standard Policy Optimization
 
@@ -51,16 +51,18 @@ J(\pi)
 .
 $$
 
-We can consider the Gibbs posterior
+However, this leads to multiple optima. Which one will a learner choose? This depends on the *inductive bias* of the learner, which we can model as a prior distribution $\omega(\pi)$ over policies.
+In general, we can consider the Gibbs posterior
 
 $$
 \omega_n(\pi) \propto \omega(\pi) \exp\left( \beta_n J(\pi) \right)
 ,
 $$
 
-where $\omega(\pi)$ is a Gibbs *prior* that encodes some inductive bias.
+where $\omega(\pi)$ is a Gibbs prior that encodes some inductive bias.
+As $\beta_n \to \infty$, $\omega_n$ concentrates on the set of optimal policies, with weights proportional to $\omega(\pi)$.
 
-Then, standard policy optimization $\Pi$ is defined as:
+Standard policy optimization $\Pi$ is defined as:
 
 $$
 \Pi(\pi \mid \pi\!\mu_{<n}) = \omega_n(\pi)
@@ -75,27 +77,7 @@ Notes:
 
 What does it mean for a policy generator $\Pi$ to be *effective*?
 This is related to the question of which policy generators we can expect people to use in practice, and somewhat related to how interpretable/predictable the behavior of $\Pi$ is.
-<!-- 
-We present the notion of *asymptotic optimality* for policy generators.
-Given $\pi_n$, define $\xi_n = \mathbb E_{\mu_n \sim \Mu(\cdot \mid \pi\!\mu_{<n} \pi_n)} \left[ \mu_n \right]$ to be the mixture of environments from $\Mu(\cdot \mid \pi\!\mu_{<n} \pi_n)$. 
-We define the asymptotic optimality of $\Pi$ in $\Mu$ as follows:
 
-$$
-\lim_{n \to \infty}
-\mathbb E_{\pi_n \sim \Pi(\cdot \mid \pi\!\mu_{<n})}
-\left[
-% \mathbb E_{\mu_n \sim \Mu(\cdot \mid \pi\!\mu_{<n}\pi_n)}
-% \left[
-V^\ast_{\xi_n}
--
-V^{\pi_n}_{\xi_n}
-% \right]
-\right]
-=0
-,
-$$
-
-with $\Mu^\Pi$-probability 1. -->
 
 Let $\xi_n = \mathbb E_{\mu_n \sim \Mu(\cdot \mid \pi\!\mu_{<n})} \left[ \mu_n \right]$ be the mixture of environments output by $\Mu$ at time $n$.
 Similarly, let $\zeta_n = \mathbb E_{\pi_n \sim \Pi(\cdot \mid \pi\!\mu_{<n})} \left[ \pi_n \right]$.
@@ -216,7 +198,7 @@ $,
 which assigns higher probability to simpler policies in the class $\mathcal P$.
 Let's also define the simplicity prior $w(\nu) \propto 2^{-K(\nu)}$ on environments in class $\mathcal M$.
 
-Let $\pi^\dagger_{-}: \mathcal M \to \mathcal P$ be a mapping from environments to policies, such that $\pi^\dagger_\nu$ is near-optimal in $\nu$ for all $\nu \in \mathcal M$,
+Let $\pi^\dagger_{-}: \mathcal M \to \mathcal P$ be a planner that maps environments to policies, such that $\pi^\dagger_\nu$ is near-optimal in $\nu$ for all $\nu \in \mathcal M$,
 
 $$
 V^{\pi^\dagger_\nu}_\nu \ge V^\ast_\nu - \varepsilon
@@ -253,135 +235,55 @@ $$
 
 I want to show that for large $\beta$, the Gibbs posterior $\omega_\beta(\pi) \propto \omega(\pi) \exp\left( \beta V^\pi_\mu \right)$ is approximately the pushforward of the distribution $w_\mu (\nu) \propto w(\nu) \mathbb I [\nu \in \mathcal M_\mu]$ under the mapping $\pi^\dagger_{-}$.
 
+<!-- 
+https://www.mdpi.com/1099-4300/28/6/596
+how should we interpret meta-RL in our framework?
+i guess the inner RL algorithm should be considered 
+ -->
+
+<!-- 
+how do we interpret a policy that does supervised learning with the given data (context) ?
+i guess it's just solomonoff induction over environment.
+ -->
+
+<!-- 
+https://www.lesswrong.com/posts/WmBukJkEFM72Xr397/mesa-search-vs-mesa-control
+
+i want my framework to be able to capture both mesa search and mesa control.
+this would be by not fixating ourselves on the AIXI style planner, but any general wrapper that satisfies some notion of optimality, e.g.
+
+ -->
+
 <!--
 perhaps we should restrict to histories that are not too "far away" from the ones seen in training?
 -->
 
-<!-- Let's make a strong assumption:
-there exists a wrapper $\pi^\dagger_{-}: \mathcal M \to \mathcal P$ that maps an environments to a planner that is optimal in that environment, and
-
-$$
--\log w(\nu) \overset{+}{=} -\log \omega(\pi^\dagger_\nu) 
-.
-$$
-
-Unfortunately, this is blatantly false in general (since an optimal policy can be very simple for some complex environments), but for now let's just go along with it and see where it leads us.
-
-Let's also assume that every policy $\pi$ is equal to $\pi^\dagger_\nu$ for some environment $\nu$.
-
-Let $\mathcal M_\mu$ be the set of environments that are indistinguishable from $\mu$ in the sense that they have the same probability distribution over histories as $\mu$:
-
-$$
-\mathcal M_\mu = \{ \nu \in \mathcal M : \forall h_{<t} \ \mu(h_{<t}) = \nu(h_{<t}) \}
-$$
-
-This doesn't mean that $\mu = \nu$, because they can have different transition functions and utility functions on histories that have *zero probability* under $\mu$.
-Still, we know that $\pi^\dagger_\nu$ is optimal in $\mu$.
-
-Let $\beta$ be very, very large, so that the Gibbs posterior $\omega_\beta$ concentrates on the optimal policies in $\mu$.
-Then, we can show that
-
-$$
-
-$$
-
-Let $\tilde \mu = \argmin_{\nu \in \mathcal M_\mu} K(\nu)$ be the simplest environment in $\mathcal M_\mu$.
-Then, by the assumption above, we have  -->
-
-
-
-
 
 <!-- 
-Suppose also that all the environments $\mu$ start with a percept, or context, $e_0$, before the first action $a_1$. And also suppose that there exists a set of percepts $\mathcal E^\empty$ such that 
+deceptive alignment is a special case of utility function misgeneralization.
+It happens when
+K(deceptive utility) < K(true utility)
+ -->
+
+### One-step environment
+
+Let's start proving some results in the simplest case, and slowly build up to more general cases.
+
+Consider a simple one-step choice task $\mu$. At the start of the interaction, it shows the agent two objects, such as a cat and a dog. The agent must then choose either the object on the left or the object on the right. After the choice is made, the agent receives the reward assigned to the object it selected, according to the reward function $r$.
+
+More formally, let $\mathcal A = \{ \text{left}, \text{right} \}$ be the action space and $\mathcal E = \mathcal O \times \mathcal O$ be the percept space where $\mathcal O$ is a set of objects, e.g., $\mathcal O = \{ \text{cat}, \text{dog}, \text{bird}, \text{fish}, \text{zebra} \}$. 
+Let $r: \mathcal O \to [0,1]$ be a reward function that assigns a reward to each object.
+The environment $\mu$ first outputs a pair of objects $(o_{\text{left}}, o_{\text{right}}) \in \mathcal O \times \mathcal O$ as its percept. The agent then chooses an action $a \in \mathcal A$, and receives the reward $r(o_a)$, where $o_a$ is the object corresponding to the chosen action.
+This reward is the utility of the interaction, so $u_\mu(o_{\text{left}}, o_{\text{right}}, a)=r(o_a)$.
+
+The aim is to show that the Gibbs posterior $\omega_\beta$ concentrates on policies that are near-optimal in some environment $\nu \in \mathcal M_\mu$, as $\beta \to \infty$.
+
+Let $\pi^\dagger_\nu$ be the policy that chooses the object with the higher reward in environment $\nu$. Then, for any $\nu \in \mathcal M_\mu$, we have
 
 $$
-\mu(e_0 \in \mathcal E^\empty) < \delta_1
-.
+V^{\pi^\dagger_\nu}_\nu \ge V^\pi_\nu \quad \text{for all } \pi \in \mathcal P.
 $$
 
-That is, the environment $\mu$ almost never outputs a percept from $\mathcal E^\empty$ at the beginning.
-
-Then, consider the set of environments $\nu$ that are concentrated on $\mathcal E^\empty$ at the beginning, i.e., $\nu(e_0 \in \mathcal E^\empty) > 1 - \delta_2$. The mixture
-
-$$
-\tilde \mu = w_1 \mu + w_2 \nu
-$$
-
-can be simpler than $\mu$, especially if $\mathcal E^\empty$ is a small set. (Not sure about this assumption either, because $\mathcal E^\empty$ is usually not that small.)
-
-We can bound the value of an arbitrary policy in $\tilde \mu$ as follows:
-
-$$
-V^\pi_{\tilde \mu} = V^\pi_{\tilde \mu}(e_0 \in \mathcal E^\empty) \tilde \mu(e_0 \in \mathcal E^\empty) + V^\pi_{\tilde \mu}(e_0 \notin \mathcal E^\empty) \tilde \mu(e_0 \notin \mathcal E^\empty)
-\le V^\pi_{\tilde \mu}(e_0 \in \mathcal E^\empty) + \delta_1
-$$ -->
-
-
-
-
-<!-- 
-Suppose we have an environment $\mu$, and consider the Gibbs posterior
-
-$$
-\omega'(\pi) \propto \omega(\pi) \exp\left( \beta V^\pi_\mu \right)
-.
-$$
-
-
-
-It's reasonable to assume that there exists some mapping $\pi^\dagger_{-}: \mathcal M \to \mathcal P$ such that a relatively simple environment $\mu$ is mapped to a relatively simple policy $\pi^\dagger_\mu$, and such that $\pi^\dagger_\mu$ is near-optimal in $\mu$.
-More formally, there exist small constants $c$ and $\varepsilon$ such that for every $\mu$,
-
-$$
--\log \omega(\pi^\dagger_\mu) \le -\log w(\mu) + c
-,
-$$
-
-and
-
-$$
-V^{\pi^\dagger_\mu}_{\mu} \ge V^{\ast}_{\mu} - \varepsilon
-.
-$$
-
-For example, one can consider a planner that wraps around an arbitrary environment $\mu$. The planner has a fixed number of bits, meaning that it incurs only a constant overhead in complexity $K$.
-
-We can expect that there are *many* such mappings $\pi^{\dagger}_-$. For instance, planners can vary in rules for tie-breaking, or tolerance ($\approx$ planning horizon). We denote the set of all such mappings by $\Pi^{\dagger}_{\varepsilon, c}$.
-
-suppose xi and nu being close together implies pi^dagger_xi is good in nu.
-
-what do we mean by close together? nu has high weight in xi? what is weight? minimal w such that 1/w * xi >= nu ?
-also, xi should be simple so that pi^dagger_xi is simple
-
-but it's possible that there is an optimal policy pi^* in nu that's simple as hell. how do we prevent that from happening?
-or at least, how do we make that "rare" so that pi^dagger_xi for lots of xi can dominate! of course, we would also have to make sure pi^dagger_xi does not overlap with pi^*.
-this is possibly the irl thing. "if there's an optimal policy pi^*_nu that's simple, then we can equate it with 
-
-V_nu^pi >= 1/w * (V^pi_xi - (1-w))
-
-At the core, we want xi such that: pi that is near-optimal in xi is guaranteed to be near-optimal in nu. and also, xi should be simple.
-
-when can policy optimal in xi be optimal in nu ?  -->
-
-
-
-
-<!-- 
-### Is AIT necessary to model this?
-
-A possible argument for why trained systems will favor optimizers over memorizers is the following: 
-
-
-### Hybrid systems
-
-
-It's possible that future AI systems become more hybrid and messier (more evolutionary-outcome-like) than current LLMs.
-For instance, the system could have an explicitly programmed planning module, or it could be a multi-agent system.
-In such cases, we might not be performing end-to-end optimization on the whole system.
-How much would our use of Gibbs posterior with simplicity prior be justified?
-
-I would imagine model-free policy optimization to still play an important role in such messy AI systems,  -->
 
 
 ## Appendix
